@@ -117,6 +117,10 @@
         <artifactId>heroku-maven-plugin</artifactId>
         <configuration>
           <appName>${heroku.appName}</appName>
+          <includeTarget>false</includeTarget>
+          <includes>
+            <include>target/whisk2-1.0.0-SNAPSHOT-runner.jar</include>
+          </includes>
           <processTypes>
             <web>java $JAVA_OPTS -jar target/whisk2-1.0.0-SNAPSHOT-runner.jar</web>
           </processTypes>
