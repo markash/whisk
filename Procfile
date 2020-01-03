@@ -1,0 +1,1 @@
+web java $JAVA_OPTS -Dquarkus.http.port=$PORT -jar target/whisk2-1.0.0-SNAPSHOT-runner.jar
