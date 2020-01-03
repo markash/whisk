@@ -20,9 +20,9 @@ import com.github.markash.whisk.model.Transformation;
 import com.github.markash.whisk.util.ResponseHelper;
 
 import org.jboss.logging.Logger;
-import org.wickedsource.docxstamper.DocxStamper;
-import org.wickedsource.docxstamper.DocxStamperConfiguration;
-import org.wickedsource.docxstamper.api.DocxStamperException;
+//import org.wickedsource.docxstamper.DocxStamper;
+//import org.wickedsource.docxstamper.DocxStamperConfiguration;
+//import org.wickedsource.docxstamper.api.DocxStamperException;
 
 
 @Path("transform")
@@ -75,25 +75,25 @@ public class TransformResource {
             InputStream is = new ByteArrayInputStream(template.getBinaryData()); 
             ByteArrayOutputStream os = new ByteArrayOutputStream()) {
         
-            @SuppressWarnings("unchecked")
-            DocxStamper<Transformation> stamper = 
-                new DocxStamperConfiguration()
-                    .build();
+            //@SuppressWarnings("unchecked")
+            //DocxStamper<Transformation> stamper = 
+            //    new DocxStamperConfiguration()
+            //        .build();
 
-            stamper.stamp(is, transformation, os);
+            //stamper.stamp(is, transformation, os);
 
             result.withData(os.toByteArray());
 
-        } catch (DocxStamperException e) {
+        // } catch (DocxStamperException e) {
 
-            logger.errorv(e, "Unable to tranform template : {0}", e.getMessage());
+        //     logger.errorv(e, "Unable to tranform template : {0}", e.getMessage());
 
-            final String additonalMessage =  e.getCause() instanceof IllegalStateException ? e.getCause().getMessage() : null;
+        //     final String additonalMessage =  e.getCause() instanceof IllegalStateException ? e.getCause().getMessage() : null;
             
-            return new Error()
-                .withError(Errors.TRANSFORMATION_ERROR)
-                .withAdditionalMessage(additonalMessage)
-                .buildResponse();
+        //     return new Error()
+        //         .withError(Errors.TRANSFORMATION_ERROR)
+        //         .withAdditionalMessage(additonalMessage)
+        //         .buildResponse();
 
         } catch (IOException e) {
             

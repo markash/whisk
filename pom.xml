@@ -59,6 +59,7 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-smallrye-metrics</artifactId>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.wickedsource.docx-stamper</groupId>
       <artifactId>docx-stamper</artifactId>
@@ -79,10 +80,17 @@
         </exclusion>
       </exclusions>
     </dependency>
+  -->
     <dependency>
       <groupId>com.google.firebase</groupId>
       <artifactId>firebase-admin</artifactId>
       <version>6.11.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.annotation</groupId>
+          <artifactId>javax.annotation-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
@@ -123,7 +131,7 @@
             <include>target/whisk2-1.0.0-SNAPSHOT-runner.jar</include>
           </includes>
           <processTypes>
-            <web>java $JAVA_OPTS -jar target/whisk2-1.0.0-SNAPSHOT-runner.jar</web>
+            <web>java $JAVA_OPTS -Dquarkus.http.port=$PORT -jar target/whisk2-1.0.0-SNAPSHOT-runner.jar</web>
           </processTypes>
         </configuration>
       </plugin>
