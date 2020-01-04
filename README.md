@@ -1,4 +1,4 @@
-<img src="./src/site/assets/whisk_logo.png" align="right"
+<img src="./src/site/assets/whisk_logo.png" align="left"
      title="Whisk by Mark Ashworth" height="60">
 
 # Whisk
@@ -7,7 +7,7 @@ Microsoft Word template retrieval, storage and transformation service.
 
 ## Getting Started
 
-The project makes use of Quarkus and Firebase, therefore you would require the GOOGLE_APPLICATION_CREDENTIALS to be setup correctly on your machine before running the application via 
+The project makes use of Quarkus and Firebase Strage, therefore you would require the GOOGLE_APPLICATION_CREDENTIALS to be setup correctly on your machine before running the application via 
 
 ```
 mvn quarkus:dev
