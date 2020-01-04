@@ -1,4 +1,4 @@
-<img src="./src/site/assets/shutterstock_1142932937.png" align="right"
+<img src="./src/site/assets/whisk_logo.png" align="right"
      title="Whisk by Mark Ashworth" height="60">
 
 # Whisk
