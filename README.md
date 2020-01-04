@@ -1,7 +1,7 @@
-# Whisk
-
 <img src="./src/site/assets/shutterstock_1142932937.png" align="right"
-     title="Whisk by Mark Ashworth" width="120" height="178">
+     title="Whisk by Mark Ashworth" height="60">
+
+# Whisk
 
 Microsoft Word template retrieval, storage and transformation service. 
 
